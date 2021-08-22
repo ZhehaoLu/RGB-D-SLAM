@@ -1,6 +1,6 @@
 # RGB-D-SLAM
 
-These are a series of projects built from scratch, aiming at constructing a simple RGB-D SLAM (simultaneous localization and mapping) solution. This project is generally modified and completed from a simple function (of detecting matchable features from two consecutive frames from part_1) to a relatively sophisticated solution.
+This built-from-scratch project aims at constructing a simple RGB-D SLAM (simultaneous localization and mapping) solution. This project is generally modified and completed from a simple function (of detecting matchable features from two consecutive frames from part_1) to a relatively sophisticated solution.
 
 The basic elements of this project can be summarized as:
 1. Feature Extraction
