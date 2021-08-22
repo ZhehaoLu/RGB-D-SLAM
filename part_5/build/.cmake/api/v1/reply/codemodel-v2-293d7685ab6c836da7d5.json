@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "slam",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "detectFeatures::@145eef247bfb46b6828c",
+					"jsonFile" : "target-detectFeatures-Debug-bcea6b20aae9a5aede60.json",
+					"name" : "detectFeatures",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "generate_pointcloud::@145eef247bfb46b6828c",
+					"jsonFile" : "target-generate_pointcloud-Debug-e19eeb5ef306f66933ae.json",
+					"name" : "generate_pointcloud",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "joinPointCloud::@145eef247bfb46b6828c",
+					"jsonFile" : "target-joinPointCloud-Debug-6b4df72e23d24ff2701b.json",
+					"name" : "joinPointCloud",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "main_test::@145eef247bfb46b6828c",
+					"jsonFile" : "target-main_test-Debug-64646ecf46e853f537c3.json",
+					"name" : "main_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "slam::@145eef247bfb46b6828c",
+					"jsonFile" : "target-slam-Debug-1dac06c1cb588e639d67.json",
+					"name" : "slam",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "slamEnd::@145eef247bfb46b6828c",
+					"jsonFile" : "target-slamEnd-Debug-41baf5fb722633a592cd.json",
+					"name" : "slamEnd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "slambase::@145eef247bfb46b6828c",
+					"jsonFile" : "target-slambase-Debug-65710ac1e6483e0941dd.json",
+					"name" : "slambase",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "visualOdometry::@145eef247bfb46b6828c",
+					"jsonFile" : "target-visualOdometry-Debug-102e0fda6c7aca6709b7.json",
+					"name" : "visualOdometry",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/john/Study/RGB_SLAM/rgbd_slam/part_VII/build",
+		"source" : "/home/john/Study/RGB_SLAM/rgbd_slam/part_VII"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-5 -g -rdynamic CMakeFiles/main.dir/main.cpp.o -o ../../bin/main   -L/home/john/Study/RGB_SLAM/rgbd_slam/part_III/lib 

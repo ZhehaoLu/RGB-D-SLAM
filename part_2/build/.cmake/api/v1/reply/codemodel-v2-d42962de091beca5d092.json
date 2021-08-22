@@ -1,0 +1,112 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "slam",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "detectFeatures::@145eef247bfb46b6828c",
+					"jsonFile" : "target-detectFeatures-Debug-6b034448b17a3c53b003.json",
+					"name" : "detectFeatures",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "generate_pointcloud::@145eef247bfb46b6828c",
+					"jsonFile" : "target-generate_pointcloud-Debug-ab946ec83e06cec6b299.json",
+					"name" : "generate_pointcloud",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "joinPointCloud::@145eef247bfb46b6828c",
+					"jsonFile" : "target-joinPointCloud-Debug-f11929fa5a282519cd2b.json",
+					"name" : "joinPointCloud",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "main_test::@145eef247bfb46b6828c",
+					"jsonFile" : "target-main_test-Debug-58a96c228b7e11a7853f.json",
+					"name" : "main_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "slambase::@145eef247bfb46b6828c",
+					"jsonFile" : "target-slambase-Debug-d113dfa46f130e8eaa26.json",
+					"name" : "slambase",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/john/Study/RGB_SLAM/rgbd_slam/part_IV/build",
+		"source" : "/home/john/Study/RGB_SLAM/rgbd_slam/part_IV"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_53b43/fast && /usr/bin/make  -f CMakeFiles/cmTC_53b43.dir/build.make CMakeFiles/cmTC_53b43.dir/build
+make[1]: Entering directory '/home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53b43.dir/src.c.o
+/usr/bin/x86_64-linux-gnu-gcc-5 -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_53b43.dir/src.c.o -c "/home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_53b43
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53b43.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc-5 CMakeFiles/cmTC_53b43.dir/src.c.o -o cmTC_53b43 
+CMakeFiles/cmTC_53b43.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3c)：对‘pthread_create’未定义的引用
+src.c:(.text+0x48)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x54)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x65)：对‘pthread_join’未定义的引用
+src.c:(.text+0x79)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_53b43.dir/build.make:98: recipe for target 'cmTC_53b43' failed
+make[1]: *** [cmTC_53b43] Error 1
+make[1]: Leaving directory '/home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_53b43/fast' failed
+make: *** [cmTC_53b43/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f7975/fast && /usr/bin/make  -f CMakeFiles/cmTC_f7975.dir/build.make CMakeFiles/cmTC_f7975.dir/build
+make[1]: Entering directory '/home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7975.dir/CheckFunctionExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_f7975.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f7975
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7975.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_f7975.dir/CheckFunctionExists.c.o -o cmTC_f7975  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f7975.dir/build.make:98: recipe for target 'cmTC_f7975' failed
+make[1]: *** [cmTC_f7975] Error 1
+make[1]: Leaving directory '/home/john/Study/RGB_SLAM/rgbd_slam/part V/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f7975/fast' failed
+make: *** [cmTC_f7975/fast] Error 2
+
+
+
