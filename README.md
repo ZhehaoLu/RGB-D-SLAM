@@ -24,7 +24,7 @@ Step4: $ bin/slam
 
 Then you can see all of the on-going computational results when the images are being processed. After everything is completed, a result.pcd file will be automatically generated in data. 
 
-$ pcl_viewer result.pcd
+Step5: $ pcl_viewer result.pcd
 
 The fused pointcloud can be shown by a PCD viewer.
 
