@@ -22,7 +22,7 @@ Step3: $ cd part_5
 
 Step4: $ bin/slam
 
-Then you can see all of the on-going computational results when the images are being processed. After everything is completed, a result.pcd file will be automatically generated in data. 
+Then you can see all of the on-going computational results when the images are being processed. After everything is completed, a result.pcd file will be automatically generated in the file folder of data. 
 
 Step5: $ pcl_viewer result.pcd
 
