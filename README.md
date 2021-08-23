@@ -56,7 +56,11 @@ visualOdometry.cpp: the basic functions of visual odometry are implemented here.
 
 5. Part4
 
-slamEnd.cpp: On the basis of visualOdometry.cpp, I apply graph optimization (g2o) to optimize the transformation matrix that have already been calculated before generate the pointcloud. To run a g2o optimization successfully, the solver should be initialized at first, then the first vertex should be added to the solver which should be set fixed. For the image read loop, the current frame should be added to the solver, as well as a new edge which bridges the current and last frame should be generated, with the initial measurement T (transformation matrix that calculated by visual odometry).
+slamEnd.cpp: On the basis of visualOdometry.cpp, I apply graph optimization (g2o) to optimize the transformation matrix that have already been calculated before generating the pointcloud. To run a g2o optimization successfully, the solver should be initialized at first, then the first vertex should be added to the solver which should be set fixed. For the image read loop, the current frame should be added to the solver, as well as a new edge which bridges the current and last frame should be generated, with the initial measurement T (transformation matrix that calculated by visual odometry).
+
+6. Part5
+
+Loop Detection is implemented.
 
 
 
