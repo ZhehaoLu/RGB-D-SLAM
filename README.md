@@ -28,3 +28,34 @@ Step5: $ pcl_viewer result.pcd
 
 The fused pointcloud can be shown by a PCD viewer.
 
+Description of each part
+----
+1. Organization form of the entire project
+
+In each part, the SLAM project can be devided into 4 basic folders, which are: bin,include,lib and src. Bin folder is exactly where we store all of the executable files. Include folder includes the basic functions that we may use during the following process. Lib folder contains the library files that we make. All of the .cpp files are placed in the Src file.
+
+2. Part1
+
+generatePointCloud.cpp: To make it simple, I make use of just one pair of rgb and depth image to generate a pointcloud. The traversal of the depth image aims at calculating the spatial coordinates of each points in the pointcloud, the color of these points are obtained by rgb image. Other parameters of the pointcloud is necessary to set in advance to prevent bugs from occurring, such as height, width and dense.  
+
+slamBase.cpp: After the generatePointCloud.cpp is completed and verified by testing, the generation of pointcloud is packaged into a function called image2PointCloud() in slamBase.cpp.
+
+detectFeatures.cpp: To obtain the transformation matrix of adjacent images, I first get the good matches of ORB features, then use the function of solvePnPRansac() in OpenCV to calculate the R and t of transformation matrix.
+
+3. Part2
+
+slamBase.cpp: After the detectFeatures.cpp is completed and verified by testing, it is divided into several separate functions and place into slamBase.cpp. ParameterReader() is a function that used to read the parameter.txt file which includes most of the variables that needed. With this function, the source codes are unnecessary to be changed and made once again even if parameters are unsuitable.
+
+joinPointCloud.cpp: In this cpp file, the function that joins the pointclouds which represent two adjacent images is completed.
+
+4. Part3
+
+slamBase.cpp: To make future work smoother and easier, cvMat2Eigen() and joinPointCloud() functions are implemented. The former transforms r and t into transformation matrix of Eigen format, the latter integrates the function of joining two adjacent pointclouds.
+
+visualOdometry.cpp: the basic functions of visual odometry are implemented here. What needs to be emphasize is that, I apply three methods to examine detection failure: (i) erase the frame that contains too little good matches; (ii) erase the frame that contains too little inliers; (iii) erase the situation that the transformation matrix is unreasonably too large.
+
+5. Part4
+
+
+
+
