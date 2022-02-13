@@ -28,6 +28,10 @@ Step5: $ pcl_viewer result.pcd
 
 The fused pointcloud can be shown by a PCD viewer.
 
+![Uploading rgb_slam.png…]()
+
+
+
 Description of each part
 ----
 1. Organization form of the entire project
