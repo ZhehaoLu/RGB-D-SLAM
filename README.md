@@ -28,9 +28,7 @@ Step5: $ pcl_viewer result.pcd
 
 The fused pointcloud can be shown by a PCD viewer.
 
-![Uploading rgb_slam.png…]()
-
-
+![rgb_slam](https://user-images.githubusercontent.com/85860671/153776131-0f5d19c4-6019-4f57-93d2-53288b7f438a.png)
 
 Description of each part
 ----
