@@ -40,9 +40,8 @@ int main(int argc, char** argv){
 
     // initialize
     cout<<"Initializing ..."<<endl;
-    int currIndex = startIndex; // 当前索引为currIndex
-    FRAME lastFrame = readFrame( currIndex, pd ); // 上一帧数据
-    // 我们总是在比较currFrame和lastFrame
+    int currIndex = startIndex; 
+    FRAME lastFrame = readFrame( currIndex, pd ); 
     CAMERA_INTRINSIC_PARAMETERS camera;
     camera.cx = atof(pd.getData("camera.cx").c_str());
     camera.cy = atof(pd.getData("camera.cy").c_str());
@@ -54,7 +53,6 @@ int main(int argc, char** argv){
     
     pcl::visualization::CloudViewer viewer("viewer");
 
-    // 是否显示点云
     bool visualize = pd.getData("visualize_pointcloud")==string("yes");
 
     int min_inliers = atoi( pd.getData("min_inliers").c_str() );
@@ -64,13 +62,11 @@ int main(int argc, char** argv){
     for(currIndex=startIndex+1;currIndex<endIndex;currIndex++){
         
         cout<<"Reading files "<<currIndex<<endl;
-        FRAME currFrame = readFrame( currIndex,pd ); // 读取currFrame
+        FRAME currFrame = readFrame( currIndex,pd ); 
         computeKeyPointAndDesp( currFrame);
-        // 比较currFrame 和 lastFrame
         RESULT_OF_PNP result = estimateMotion( lastFrame, currFrame, camera );
-        if ( result.inliers < min_inliers ) //inliers不够，放弃该帧
+        if ( result.inliers < min_inliers ) 
             continue;
-        // 计算运动范围是否太大
         double norm = normofTransform(result.rvec, result.tvec);
         cout<<"norm = "<<norm<<endl;
         if ( norm >= max_norm )
